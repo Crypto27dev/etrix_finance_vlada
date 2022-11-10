@@ -1,0 +1,789 @@
+.container {
+  width: 100%;
+
+  @media (min-width: 1280px) {
+    max-width: 1140px !important;
+  }
+}
+
+.banner {
+  .logo {
+    width: 100%;
+  }
+}
+
+.banner-light {
+  position: absolute;
+  top: calc(0% - 50px);
+  left: calc(0% - 90px);
+
+  .flash-light {
+    width: 200px;
+    height: 200px;
+    filter: blur(60px);
+  }
+
+  .banner-planet {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    right: 70px;
+    top: 50%;
+    opacity: 60%;
+  }
+}
+
+.who-light {
+  position: absolute;
+  top: calc(0% - 70px);
+  left: calc(0%);
+
+  .flash-light {
+    width: 90px;
+    height: 90px;
+    filter: blur(100px);
+  }
+
+  .who-planet {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 70px;
+    top: 50%;
+    opacity: 40%;
+  }
+}
+
+.who-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-flicker {
+  animation: flickerAnimation 5s infinite;
+}
+
+.star-group {
+  .star1 {
+    position: absolute;
+    width: 60px;
+    top: 20px;
+    left: 10%;
+    animation: flickerAnimation 5s infinite;
+  }
+
+  .star2 {
+    position: absolute;
+    width: 50px;
+    top: 60px;
+    right: 180px;
+  }
+
+  .star3 {
+    position: absolute;
+    width: 50px;
+    top: 55%;
+    left: 120px;
+    animation: flickerAnimation 4s infinite;
+    animation-delay: 4s;
+  }
+
+  .star4 {
+    position: absolute;
+    width: 40px;
+    bottom: 70px;
+    right: 200px;
+  }
+
+  .star5 {
+    position: absolute;
+    width: 10px;
+    top: 100px;
+    left: 100px;
+    animation: flickerAnimation 4s infinite;
+    animation-delay: 6s;
+  }
+
+  .star6 {
+    position: absolute;
+    width: 15px;
+    bottom: 70px;
+    left: 150px;
+  }
+
+  .star7 {
+    position: absolute;
+    width: 20px;
+    top: 145px;
+    right: 100px;
+    animation: flickerAnimation 4s infinite;
+    animation-delay: 6s;
+  }
+
+  .star8 {
+    position: absolute;
+    width: 12px;
+    bottom: 70px;
+    right: 150px;
+  }
+}
+
+.who-star-group {
+  .star1 {
+    position: absolute;
+    width: 60px;
+    top: 20px;
+    left: 20%;
+    animation: flickerAnimation 5s infinite;
+  }
+
+  .star2 {
+    position: absolute;
+    width: 50px;
+    top: 60px;
+    left: 70%;
+  }
+
+  .star3 {
+    position: absolute;
+    width: 40px;
+    bottom: 200px;
+    left: 90%;
+    animation: flickerAnimation 5s infinite;
+    animation-delay: 6s;
+  }
+
+  .star4 {
+    position: absolute;
+    width: 25px;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+.token-star-group {
+  .star1 {
+    position: absolute;
+    width: 60px;
+    bottom: 20px;
+    left: 10%;
+    animation: flickerAnimation 5s infinite;
+  }
+
+  .star2 {
+    position: absolute;
+    width: 50px;
+    top: 60px;
+    left: 50%;
+  }
+
+  .star3 {
+    position: absolute;
+    width: 40px;
+    bottom: 200px;
+    left: 90%;
+    animation: flickerAnimation 5s infinite;
+    animation-delay: 6s;
+  }
+
+  .star4 {
+    position: absolute;
+    width: 10px;
+    top: 100px;
+    left: 10%;
+  }
+
+  .star5 {
+    position: absolute;
+    width: 15px;
+    bottom: 80px;
+    left: 70%;
+    animation: flickerAnimation 5s infinite;
+    animation-delay: 6s;
+  }
+
+  .star6 {
+    position: absolute;
+    width: 20px;
+    top: 50px;
+    left: 85%;
+  }
+
+  .star7 {
+    position: absolute;
+    width: 15px;
+    bottom: 0px;
+    left: 40%;
+    animation: flickerAnimation 5s infinite;
+    animation-delay: 6s;
+  }
+
+  .star8 {
+    position: absolute;
+    width: 10px;
+    bottom: 50%;
+    left: 60%;
+  }
+
+  .star9 {
+    position: absolute;
+    width: 10px;
+    bottom: 50%;
+    left: 15%;
+    animation: flickerAnimation 5s infinite;
+    animation-delay: 6s;
+  }
+
+  .planet {
+    position: absolute;
+    width: 60px;
+    bottom: 100px;
+    right: 5%;
+  }
+
+  .planet2 {
+    position: absolute;
+    width: 60px;
+    top: 100px;
+    left: 5%;
+  }
+
+  .line {
+    position: absolute;
+    width: 250px;
+    bottom: 0;
+    right: 0;
+    transform: rotateY(200deg);
+  }
+}
+
+.team-star-group {
+  .star1 {
+    position: absolute;
+    width: 60px;
+    bottom: 20px;
+    left: 20%;
+    animation: flickerAnimation 5s infinite;
+  }
+
+  .star2 {
+    position: absolute;
+    width: 50px;
+    top: 60px;
+    left: 50%;
+  }
+
+  .star3 {
+    position: absolute;
+    width: 40px;
+    bottom: 200px;
+    left: 90%;
+    animation: flickerAnimation 5s infinite;
+    animation-delay: 6s;
+  }
+
+  .star4 {
+    position: absolute;
+    width: 10px;
+    top: 100px;
+    left: 10%;
+  }
+
+  .star5 {
+    position: absolute;
+    width: 15px;
+    bottom: 80px;
+    left: 70%;
+    animation: flickerAnimation 5s infinite;
+    animation-delay: 6s;
+  }
+
+  .star6 {
+    position: absolute;
+    width: 20px;
+    top: 50px;
+    left: 85%;
+  }
+
+  .planet {
+    position: absolute;
+    width: 60px;
+    bottom: 100px;
+    right: 5%;
+  }
+
+  .planet2 {
+    position: absolute;
+    width: 60px;
+    top: 100px;
+    left: 5%;
+  }
+
+  .line {
+    position: absolute;
+    width: 250px;
+    bottom: 0;
+    right: 0;
+    transform: rotateY(200deg);
+  }
+}
+
+.who {
+  .star4 {
+    position: absolute;
+    width: 40px;
+    bottom: 200px;
+    top: 50px;
+    left: 13%;
+    animation: flickerAnimation 3s infinite;
+    animation-delay: 6s;
+  }
+
+  .logo-watermark {
+    position: absolute;
+    width: 800px;
+    top: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+.token-light {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .flash-light {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    filter: blur(200px);
+  }
+}
+
+.roadmap-light {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .flash-light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    filter: blur(200px);
+  }
+}
+
+.team-light {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .flash-light {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 150px;
+    height: 400px;
+    filter: blur(200px);
+  }
+
+  .line {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    transform: rotateX(180deg);
+  }
+}
+
+.faq-light {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .flash-light {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    filter: blur(220px);
+  }
+}
+
+.roadmap {
+  .timeline {
+    width: 100%;
+    height: 1px;
+    transform: translateY(44px);
+    background: radial-gradient(104.03% 166409988.5% at 100% 100%, rgba(207, 253, 51, 0) 0%, #5CF28F 52.68%, rgba(207, 253, 51, 0) 100%);
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .roadmap-time {
+    position: relative;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    margin-left: -10px;
+
+    @media only screen and (max-width: 768px) {
+      padding-left: 30px;
+
+      &::before {
+        content: '';
+        background: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        bottom: 5px;
+        left: 6px;
+      }
+
+      &::after {
+        content: '';
+        background: linear-gradient(135deg, rgba(0, 245, 255, 0.3) 0%, rgba(0, 232, 125, 0.3) 87.58%, rgba(0, 230, 106, 0.3) 100%);
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: white;
+        bottom: 0px;
+        left: 1px;
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      &::before {
+        content: '';
+        background: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        bottom: -20px;
+        left: 5px;
+      }
+
+      &::after {
+        content: '';
+        background: linear-gradient(135deg, rgba(0, 245, 255, 0.3) 0%, rgba(0, 232, 125, 0.3) 87.58%, rgba(0, 230, 106, 0.3) 100%);
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: white;
+        bottom: -25px;
+        left: 0;
+      }
+    }
+  }
+
+  .roadmap-item {
+    li {
+      color: #B2B4B4;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .roadmap-data {
+    list-style: disc;
+    margin-left: 0;
+    margin-top: 40px;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    cursor: pointer;
+
+    li {
+      margin-left: 14px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      margin-top: 10px;
+
+      li {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .roadmap-timeline {
+    position: relative;
+    padding-left: 40px;
+
+    @media only screen and (max-width: 768px) {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 40px;
+        height: 100%;
+        width: 2px;
+
+        background: linear-gradient(rgba(207, 253, 51, 0) 0%, #5CF28F 20%, #5CF28F 80%, rgba(207, 253, 51, 0) 100%);
+      }
+    }
+  }
+}
+
+.bg-icon3 {
+  position: absolute;
+  left: -130px;
+  bottom: -60px;
+  z-index: 0;
+}
+
+.bg-icon4 {
+  position: absolute;
+  right: -90px;
+  top: -20px;
+  z-index: 0;
+}
+
+.faqs_block {
+  padding: 3px 3px 0 3px;
+
+  .faqs_inner {
+    position: relative;
+  }
+
+  p {
+    color: white;
+  }
+
+  .accordion {
+    z-index: 0;
+    position: relative;
+  }
+
+  .accordion-item {
+    background-color: transparent;
+
+    &+.accordion-item {
+      margin-top: 25px;
+    }
+  }
+
+  .accordion-body {
+    color: #AEAFB1;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+  }
+
+  .accordion-button {
+    color: white !important;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 4px !important;
+
+    &:hover {
+      border-color: #5c6096 !important;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .accordion-item {
+    border: 1px solid #404143;
+    border-radius: 10px !important;
+    margin-top: 10px;
+  }
+
+  .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L5.37333 8L10.6667 0H0Z' fill='%235CF28F'/%3E%3C/svg%3E");
+    width: 2rem;
+    height: 2rem;
+    background-color: #2C2D2F;
+    background-size: 10px;
+    background-position: center;
+    border-radius: 50%;
+  }
+
+  .accordion-button[aria-expanded="true"]::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11 0l-5.4 8-5.3-8z' fill='white'/%3E%3C/svg%3E");
+  }
+
+  .faq_more_btn {
+    position: relative;
+    z-index: 111;
+  }
+}
+
+#exchange_frame {
+  border-radius: 20px;
+}
+
+.exchange_llc {
+  width: 100px;
+  height: auto;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes shrink {
+  0% {
+    margin-bottom:0;
+    margin-right:0;
+    width:0;
+    height:0;
+    opacity:0
+  } 
+  10% {
+    opacity:.5
+  } 
+  30% {
+    opacity:.3
+  } 
+  60% {
+    opacity:0
+  } 
+  100% {
+    margin-bottom:-50%;
+    margin-right:-50%;
+    width:100%;
+    height:100%;
+    opacity:0
+  }
+}
+
+.swap-logo {
+  img {
+    border: solid 10px rgba(255, 255, 255, .1);
+    border-radius: 50%;
+  }
+  #ripple,
+  #ripple2,
+  #ripple3 {
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .4);
+    box-shadow: 0 0 20px rgb(255 255 255 / 40%);
+    position: absolute;
+    bottom: 50%;
+    margin-bottom: -50%;
+    right: 50%;
+    margin-right: -50%;
+    animation: shrink 5s linear infinite;
+    z-index: 0;
+    background: rgba(255, 255, 255, .4);
+  }
+
+  #ripple {
+    animation-delay: 1s;
+  }
+
+  #ripple2 {
+    animation-delay: 1.5s;
+  }
+
+  #ripple3 {
+    animation-delay: 2s;
+  }
+}
+
+.team {
+  .member {
+    img {
+      width: 350px;
+    }
+  }
+}
+
+.team-members {
+  .member {
+    position: relative;
+    background: linear-gradient(#072A22, #072A22) padding-box, linear-gradient(180deg, rgba(0, 230, 106, 0.6) 0%, rgba(0, 245, 255, 0.3) 100%) border-box;
+    border: 1px solid transparent;
+    background-color: #072A22;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: all .5s;
+    cursor: pointer;
+
+    .member-name {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .linkedin-icon {
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
+      background: white;
+      color: #000706;
+      padding: 5px 10px 3px 10px;
+      border-radius: 5px;
+
+      &:hover {
+        background: linear-gradient(135deg, #00F5FF 0%, #00E87D 85%, #00E66A 100%);
+      }
+    }
+
+    img {
+      border-radius: 10px;
+      margin: auto;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

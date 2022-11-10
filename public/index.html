@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="author" />
+  <meta name="description" content="Etrix is a global decentralized ecosystem where our stake holders achieve financial freedom though passive income in DeFi." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Etrix Finance" />
+  <meta property="og:description" content="Etrix is a global decentralized ecosystem where our stake holders achieve financial freedom though passive income in DeFi." />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="Etrix Finance" />
+  <meta property="og:updated_time" content="2022-06-25T12:19:50-07:00" />
+  <meta property="og:image" content="%PUBLIC_URL%/logo-full.png" />
+  <meta property="og:image:secure_url" content="%PUBLIC_URL%/logo-full.png" />
+  <meta property="og:image:width" content="420" />
+  <meta property="og:image:height" content="420" />
+  <meta property="og:image:alt" content="Home Page &#8211; [V1]" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="article:published_time" content="2022-06-24T13:07:40-07:00" />
+  <meta property="article:modified_time" content="2022-06-25T12:19:50-07:00" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Etrix Finance" />
+  <meta name="twitter:description" content="Etrix is a global decentralized ecosystem where our stake holders achieve financial freedom though passive income in DeFi." />
+  <meta name="twitter:image" content="%PUBLIC_URL%/logo-full.png" />
+  <meta name="twitter:label1" content="Written by" />
+  <meta name="twitter:data1" content="ETR" />
+  <meta name="twitter:label2" content="Time to read" />
+  <meta name="twitter:data2" content="2 minutes" />
+
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo-full.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <script src="https://kit.fontawesome.com/58462686c9.js" crossorigin="anonymous"></script>
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Etrix Finance</title>
+  <style>
+    @keyframes hideLoader {
+      0% {
+        width: 100%;
+        height: 100%;
+      }
+
+      100% {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    @keyframes animateBg {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    body>div.loader {
+      position: fixed;
+      background: #222;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99;
+      opacity: 0;
+      transition: opacity .5s ease;
+      overflow: hidden;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: animateBg 10s linear infinite;
+    }
+
+    body:not(.loaded)>div.loader {
+      opacity: 1;
+    }
+
+    body:not(.loaded) {
+      overflow: hidden;
+    }
+
+    body.loaded>div.loader {
+      animation: hideLoader .5s linear .5s forwards;
+    }
+
+    /* Typing Animation */
+    .loading-animation {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: relative;
+      left: -12px;
+    }
+
+    body>div.loader>div.loading-animation>span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(calc(18deg * var(--i)));
+    }
+
+    body>div.loader>div.loading-animation>span::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #00ff0a;
+      box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a,
+        0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+      animation: animate 1s linear infinite;
+      animation-delay: calc(0.05s * var(--i));
+    }
+
+    @keyframes animate {
+      0% {
+        transform: scale(1);
+      }
+
+      80%,
+      100% {
+        transform: scale(0);
+      }
+    }
+  </style>
+  <script type="text/javascript">
+    window.addEventListener("load", function () { document.querySelector('body').classList.add('loaded'); });
+  </script>
+</head>
+
+<body>
+  <div class="loader">
+    <div class="loading-animation">
+      <span style="--i: 1;"></span>
+      <span style="--i: 2;"></span>
+      <span style="--i: 3;"></span>
+      <span style="--i: 4;"></span>
+      <span style="--i: 5;"></span>
+      <span style="--i: 6;"></span>
+      <span style="--i: 7;"></span>
+      <span style="--i: 8;"></span>
+      <span style="--i: 9;"></span>
+      <span style="--i: 10;"></span>
+      <span style="--i: 11;"></span>
+      <span style="--i: 12;"></span>
+      <span style="--i: 13;"></span>
+      <span style="--i: 14;"></span>
+      <span style="--i: 15;"></span>
+      <span style="--i: 16;"></span>
+      <span style="--i: 17;"></span>
+      <span style="--i: 18;"></span>
+      <span style="--i: 19;"></span>
+      <span style="--i: 20;"></span>
+    </div>
+  </div>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>

@@ -1,0 +1,857 @@
+$main_color: #01120C;
+$more_color: #06302566;
+$app_gray: #B2B7B6;
+$app_bright: #21FF90;
+$app_yellow: #FDC114;
+
+.app-gray {
+  color: $app_gray;
+}
+
+.app-brown {
+  color: rgba(253, 193, 20, 0.5);
+}
+
+.app-yellow {
+  color: $app_yellow;
+}
+
+.app-bright {
+  color: $app_bright;
+}
+
+.text-shorten {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.full-container {
+  background: url('./assets/pattern.png');
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  @media only screen and (max-width: 639px) {
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px;
+  }
+}
+
+/*********************************************************/
+/************            Side Bar              ***********/
+/*********************************************************/
+.my-navbar {
+  position: fixed;
+  width: 290px;
+  height: calc(100% - 80px);
+  opacity: 1;
+  margin: 40px;
+  padding: 20px;
+  background: $main_color;
+  box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.4);
+  border: solid 1px #013a2b;
+  // backdrop-filter: blur(25px);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 1023px) {
+    display: none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba(78, 78, 78, 0.3);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 10px;
+  }
+}
+
+.hide-nav {
+  opacity: 1;
+
+  &.mobile {
+    transform: translateX(-290px);
+    transition: opacity 0.4s, transform 0.4s ease-in;
+  }
+
+  &.non-mobile {
+    width: 0px;
+    transition: width 0.4s ease-in;
+
+    .navbar-content {
+      transform: translateX(-290px);
+      opacity: 0;
+      transition: opacity 0.4s, transform 0.4s ease-in;
+    }
+  }
+}
+
+.header-title {
+  margin-left: 3rem;
+}
+
+.my-border-color {
+  border-color: #013a2b !important;
+}
+
+.menu-item {
+  position: relative;
+  width: 80%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 0.5rem 1.5rem;
+
+  div {
+    white-space: nowrap;
+  }
+
+  .new-chip {
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    color: white;
+    background-color: #ff9900;
+    border-radius: 20px;
+    padding: 1px 6px;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+}
+
+.menu-active-item {
+  position: relative;
+  font-size: 16px;
+  width: auto;
+  background: linear-gradient(#013425, #013425) padding-box, linear-gradient(135deg, rgba(0, 245, 255, 1) 0%, rgba(0, 232, 125, 1) 87.58%, rgba(0, 230, 106, 1) 100%) border-box;
+  background-color: #013425;
+  border: solid 1px transparent;
+  border-radius: 5rem;
+}
+
+/********************************************/
+/**********      App Container     **********/
+/********************************************/
+.app-container {
+  display: inline-block;
+  position: relative;
+  width: calc(100vw - 410px);
+  height: calc(100vh - 80px);
+  margin: 40px;
+  padding: 40px 0;
+  margin-left: 370px;
+  background: $main_color;
+  box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.4);
+  border: solid 1px #013a2b;
+  // backdrop-filter: blur(25px);
+  border-radius: 30px;
+
+  @media only screen and (max-width: 1023px) {
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    margin: 20px;
+  }
+
+  @media only screen and (max-width: 639px) {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px;
+
+  @media only screen and (max-width: 639px) {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+  }
+}
+
+.app-content {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @media only screen and (max-width: 639px) {
+    padding: 0 5px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+.app-body {
+  padding: 0 20px;
+
+  @media only screen and (max-width: 639px) {
+    padding: 0 10px;
+  }
+}
+
+.thumb-horizontal {
+  width: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  background-color: #345B5D;
+  cursor: pointer;
+}
+
+/***********         App Card         ************/
+.app-card {
+  background: $more_color;
+  // backdrop-filter: blur(50px);
+  border: solid 1px #036b60;
+  border-radius: 20px;
+  padding: 15px 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 639px) {
+    padding: 15px 15px;
+  }
+
+  .app-card-body {
+    margin: 20px 0;
+  }
+
+  .app-subcard {
+    position: relative;
+    background: #071411;
+    box-shadow: 0px 5px 5px #010B08;
+    border-radius: 20px;
+    padding: 30px 60px;
+    background-clip: padding-box;
+    $border: 1px;
+    border: solid $border transparent;
+
+    @media only screen and (max-width: 639px) {
+      padding: 15px 15px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -$border;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(0, 245, 255, 0.5) 0%, rgba(0, 230, 106, 0) 100%);
+    }
+  }
+
+  .app-sub2card {
+    position: relative;
+    background: #072a22;
+    border-radius: 20px;
+    padding: 15px 20px;
+    background-clip: padding-box;
+    $border: 1px;
+    border: solid $border transparent;
+    height: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -$border;
+      border-radius: inherit;
+      background: linear-gradient(180deg, rgba(0, 245, 255, 0.5) 0%, rgba(0, 230, 106, 0) 100%);
+    }
+  }
+
+  .date-time {
+    font-size: 34px;
+    font-weight: 500;
+    color: #5CF28F;
+
+    @media only screen and (max-width: 639px) {
+      font-size: 28px;
+    }
+  }
+
+  .date-text {
+    font-size: 16px;
+    color: $app_gray;
+
+    @media only screen and (max-width: 639px) {
+      font-size: 13px;
+    }
+  }
+}
+
+.input-token {
+  width: 50%;
+  background: transparent;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
+/*********      Pregress Bar        **********/
+.progres-area {
+  .progress-top {
+    position: absolute;
+    top: 0.8rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    color: #FFF;
+    padding: 0 1rem;
+  }
+
+  .progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    background-color: #007BFF;
+    transition: width .6s ease;
+  }
+
+  .progress-bars {
+    position: absolute;
+    top: 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: #FFF;
+    padding: 0 1rem;
+  }
+
+  .progress {
+    display: flex;
+    background: #FFF;
+    border: 4px solid #FFF;
+    border-radius: 1rem;
+    height: 1.875rem;
+    font-size: .75rem;
+
+    @media only screen and (max-width: 576px) {
+      height: 1.3rem;
+    }
+  }
+
+  .progress-bottom {
+    display: flex;
+    color: #FFF;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1rem;
+
+    .progress-info {
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: 576px) {
+      bottom: 0.5rem;
+
+      .progress-info {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .progress-bar-custom {
+    border-radius: 1rem;
+    height: 1.36rem;
+    background: linear-gradient(to right, rgb(4 107 69), rgb(0 232 128));
+    box-shadow: 2px 0 7px 0 rgb(0 0 0 / 35%);
+
+    @media only screen and (max-width: 576px) {
+      height: 0.8rem;
+    }
+  }
+
+  .progress-amount {
+    position: absolute;
+    background: #013425;
+    border: solid 2px rgb(0 202 108);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    span {
+      font-size: 16px;
+      font-weight: 300;
+      color: white;
+    }
+
+    @media only screen and (max-width: 576px) {
+      width: 45px;
+      height: 45px;
+      top: 20px;
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.app-nav-icon {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  display: block;
+  width: 20px;
+  height: 10px;
+  padding-top: 13px;
+  line-height: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 9999;
+  display: none;
+
+  @media only screen and (max-width: 1023px) {
+    display: block;
+  }
+
+  @media only screen and (min-width: 639px) {
+    right: 40px;
+  }
+
+  .menu-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 0px;
+    background-color: white;
+  }
+
+  .menu-line1 {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 5px;
+    background-color: white;
+  }
+
+  .menu-line2 {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 10px;
+    background-color: white;
+  }
+}
+
+.sub-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.subheader-popover .MuiPaper-root {
+  background: #043423;
+  box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(0px);
+  border-radius: 30px;
+  padding: 15px 10px;
+
+  .navbar-item,
+  .navbar-item span {
+    color: $app_gray;
+  }
+
+  .navbar-item:hover {
+
+    a,
+    span {
+      color: white;
+    }
+  }
+
+  .menu-active-item {
+
+    a,
+    span {
+      color: white;
+    }
+  }
+}
+
+.chart_frame {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+
+  .theme-text-primary {
+    color: #5cf28f;
+  }
+}
+
+.input-control {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #072a22;
+  border: solid 1px #5947FF;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .input-suffix {
+    cursor: pointer;
+
+    &:hover {
+      color: gray;
+    }
+  }
+
+  background-clip: padding-box;
+  $border: 1px;
+  border: solid $border transparent;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    background: linear-gradient(180deg, rgba(0, 245, 255, 0.5) 0%, rgba(0, 230, 106, 0) 100%);
+  }
+}
+
+.input-main {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.MuiSlider-thumb {
+  width: 28px !important;
+  height: 28px !important;
+  background: rgb(41 55 104);
+  border: solid 3px #5cf28f;
+}
+
+.MuiSlider-track {
+  border: 2px solid rgb(92 68 255);
+  background: linear-gradient(135deg, #00F5FF 0%, #00E87D 85%, #00E66A 100%);
+  height: 14px !important;
+  color: transparent;
+}
+
+.MuiSlider-rail {
+  height: 14px !important;
+  border: solid 2px #fff;
+  background: grey;
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.app-star-group {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .planet1 {
+    width: 50px;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+
+    @media only screen and (max-width: 1023px) {
+      top: -10px;
+      left: -10px;
+    }
+  }
+
+  .planet2 {
+    width: 80px;
+    position: absolute;
+    top: -60px;
+    right: -50px;
+  }
+
+  .planet3 {
+    width: 20px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .star1 {
+    width: 40px;
+    position: absolute;
+    top: 50px;
+    right: 40%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 5s linear infinite;
+  }
+
+  .star2 {
+    width: 10px;
+    position: absolute;
+    top: 15px;
+    left: 25%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 4s linear infinite;
+  }
+
+  .star3 {
+    width: 8px;
+    position: absolute;
+    top: 60px;
+    left: 40%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 3s linear infinite;
+  }
+
+  .star4 {
+    width: 40px;
+    position: absolute;
+    bottom: 100px;
+    left: 10%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 3s linear infinite;
+  }
+
+  .star5 {
+    width: 8px;
+    position: absolute;
+    bottom: 40px;
+    right: 15%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 3s linear infinite;
+  }
+
+  .star6 {
+    width: 13px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 3s linear infinite;
+  }
+
+  .star7 {
+    width: 12px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 4s linear infinite;
+  }
+
+  .star8 {
+    width: 10px;
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 2s linear infinite;
+  }
+
+  .star9 {
+    width: 10px;
+    position: absolute;
+    top: 65%;
+    right: 5%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 3s linear infinite;
+  }
+
+  .star10 {
+    width: 40px;
+    position: absolute;
+    top: 70%;
+    right: 50%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 4s linear infinite;
+  }
+}
+
+.navbar-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .star1 {
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 5s linear infinite;
+  }
+}
+
+.navbar-star-group {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .star2 {
+    position: absolute;
+    width: 40px;
+    bottom: 40%;
+    left: -20px;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 5s linear infinite;
+  }
+
+  .star3 {
+    position: absolute;
+    width: 50px;
+    bottom: 30%;
+    right: -20px;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 4s linear infinite;
+  }
+
+  .star4 {
+    position: absolute;
+    width: 15px;
+    bottom: 40px;
+    right: 30%;
+    transform: translate3D(0, 0, 0);
+    will-change: transform;
+    // animation: flickerAnimation 3s linear infinite;
+  }
+}
+
+.footer-star-group {
+  position: absolute;
+  bottom: -25px;
+  left: -25px;
+}
+
+.MuiLoadingButton-root {
+  transition: all 0.5s ease;
+  position: relative;
+  font-size: 16px;
+  padding: 10px 25px !important;
+  width: fit-content;
+  background: linear-gradient(#013425, #013425) padding-box, linear-gradient(135deg, rgba(0, 245, 255, 1) 0%, rgba(0, 232, 125, 1) 87.58%, rgba(0, 230, 106, 1) 100%) border-box !important;
+  background-color: #013425 !important;
+  border: solid 2px transparent !important;
+  border-radius: 5rem !important;
+  cursor: pointer;
+  transition: all .5s;
+
+  &:disabled {
+    background: linear-gradient(#013425, #013425) padding-box, linear-gradient(135deg, rgb(6, 96, 99) 0%, rgb(0, 128, 68) 87.58%, rgb(0, 116, 54) 100%) border-box !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, rgba(0, 245, 255, 1) 0%, rgba(0, 232, 125, 1) 87.58%, rgba(0, 230, 106, 1) 100%) border-box !important;
+    color: black;
+    transition: all .5s;
+  }
+}
+
+.MuiLoadingButton-loading {
+  padding-right: 40px !important;
+  background: linear-gradient(#013425, #013425) padding-box, linear-gradient(135deg, rgb(0 126 130) 0%, rgb(0 117 63) 87.58%, rgb(0 117 54) 100%) border-box !important;
+  background-color: #013425 !important;
+  color: rgb(255 255 255 / 50%) !important;
+  transition: all 0.5s ease !important;
+  background-clip: padding-box !important;
+  border: solid 2px transparent !important;
+  border-radius: 5rem !important;
+  cursor: not-allowed !important;
+}
+
+.swal2-styled.swal2-confirm {
+  width: 100px;
+  background: linear-gradient(#013425, #013425) padding-box, linear-gradient(135deg, rgba(0, 245, 255, 1) 0%, rgba(0, 232, 125, 1) 87.58%, rgba(0, 230, 106, 1) 100%) border-box !important;
+  border-radius: 5rem;
+}
