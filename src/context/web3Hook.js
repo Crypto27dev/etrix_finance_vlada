@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Web3Modal from 'web3modal';
 import Web3 from 'web3';
 import WalletConnectProvider from "@walletconnect/web3-provider";
-import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
+// import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
 import { providers } from 'ethers';
 import { toast } from 'react-toastify';
 import { config, ABI } from '../config';
@@ -26,14 +26,14 @@ if (typeof window !== "undefined") {
           },
         },
       },
-      coinbasewallet: {
-        package: CoinbaseWalletSDK,
-        options: {
-          appName: "Coinbase",
-          infuraId: config.INFURA_ID,
-          chainId: 56
-        },
-      },
+      // coinbasewallet: {
+      //   package: CoinbaseWalletSDK,
+      //   options: {
+      //     appName: "Coinbase",
+      //     infuraId: config.INFURA_ID,
+      //     chainId: 56
+      //   },
+      // },
     }, // required
     theme: "dark",
   });
